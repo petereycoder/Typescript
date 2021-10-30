@@ -7,7 +7,8 @@
     };
     flash = {
         name: 'Pinocho',
-        age: 60,
+        //age: 60,
         powers: ['Mentiroso']
     };
+    console.log(flash);
 })();
