@@ -8,7 +8,10 @@
     flash = {
         name: 'Pinocho',
         //age: 60,
-        powers: ['Mentiroso']
+        powers: ['Mentiroso'],
+        getName: function () {
+            return this.name;
+        }
     };
-    console.log(flash);
+    console.log(flash.getName());
 })();
