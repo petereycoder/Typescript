@@ -5,13 +5,9 @@
         age: 25,
         powers: ['Super veloz', 'Super tragón']
     };
-    flash = {
-        name: 'Pinocho',
-        //age: 60,
-        powers: ['Mentiroso'],
-        getName: function () {
-            return this.name;
-        }
+    var superman = {
+        name: 'Clark Kent',
+        age: 21,
+        powers: ['Super fuerte']
     };
-    console.log(flash.getName());
 })();
