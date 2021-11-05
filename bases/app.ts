@@ -1,80 +1,76 @@
-(() => {
+type Carro = {
+  carroceria: string;
+  modelo: string;
+  antibalas: boolean;
+  pasajeros: number;
+  disparar?: () => void;
+}
 
-    //? Funciones básicas
-  function sumar ( a:number, b:number ):number{
-    return a + b;
+// Objetos
+const batimovil: Carro = {
+  carroceria: "Negra",
+  modelo: "6x6",
+  antibalas: true,
+  pasajeros:4
+};
+
+const bumblebee: Carro = {
+  carroceria: "Amarillo con negro",
+  modelo: "4x2",
+  antibalas: true,
+  pasajeros:4,
+  disparar(){ // El metodo disparar es opcional
+    console.log("Disparando");
   }
+};
 
-  const contar = ( heroes:string [] ):number => {
-    return heroes.length;
-  }
-  var superHeroes:string [] =  ["Flash", "Arrow", "Superman", "Linterna Verde"];
-  contar(superHeroes);
+type Villano = {
+  nombre: string;
+  edad: number;
+  mutante: boolean;
+}
 
-  // Parametros por defecto
-  const llamarBatman = ( llamar:boolean = true ):void => {
-    if( llamar ){
-      console.log("Batiseñal activada");
-    }
-  }
+// Villanos debe de ser un arreglo de objetos personalizados
+const villanos: Villano []= [{
+  nombre:"Lex Luthor",
+  edad: 54,
+  mutante:false
+},{
+  nombre: "Erik Magnus Lehnsherr",
+  edad: 49,
+  mutante: true
+},{
+  nombre: "James Logan",
+  edad: 32,
+  mutante: true
+}];
 
-  llamarBatman();
+// Multiples tipos
+// cree dos tipos, uno para charles y otro para apocalipsis
 
-  //Rest?
-  const unirheroes = ( ...personas:string[] ):string => {
-    return personas.join(", ");
-  }
+type Charles = {
+  poder: string;
+  estatura: number;
+}
 
-  //Tipo funcion
-  const noHaceNada = ( numero:number, texto:string, booleano:boolean, arreglo:string [] ) => {}
+const charles: Charles = {
+  poder:"psiquico",
+  estatura: 1.78
+};
 
-  // Crear el tipo de funcion que acepte la funcion "noHaceNada"
-  let noHaceNadaTampoco: (n:number,t:string,b:boolean,a:string []) => void;
+type Apocalipsis = {
+  lider: boolean;
+  miembros: string [];
+}
 
-  noHaceNadaTampoco = noHaceNada;
+const apocalipsis: Apocalipsis = {
+  lider:true,
+  miembros: ["Magneto","Tormenta","Psylocke","Angel"]
+}
 
-    // Tipos
-    //const batman: string = 'Bruce';
-    //const superman: string = 'Clark';
-  
-    //const existe: boolean = false;
-  
-    // Tuplas
-    //const parejaHeroes: [ string, string ] = [batman,superman];
-    //const villano: [ string, number, boolean ] = ['Lex Lutor',5,true];
-  
-    // Arreglos
-    //const aliados: string [] = ['Mujer Maravilla','Acuaman','San', 'Flash'];
-  
-    //Enumeraciones
-    //enum fuerza{
-      //acuaman = 0,
-      //batman = 1,
-      //flash = 5,
-      //superman = 100
-    //}
 
-    //const fuerzaFlash:fuerza = fuerza.flash;
-    //const fuerzaSuperman:fuerza = fuerza.superman;
-    //const fuerzaBatman:fuerza = fuerza.batman;
-    //const fuerzaAcuaman:fuerza = fuerza.acuaman;
+// Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
+let mystique: Charles | Apocalipsis;
 
-    
-    // Retorno de funciones
-    //function activar_batiseñal(): string{
-      //return 'activada';
-    //}
-  
-    //function pedir_ayuda(): void{
-      //console.log('Auxilio!!!');
-    //}
-  
-    // Aserciones de Tipo
-    //const poder: any = '100';
-    //const largoDelPoder:number = (poder as string ).length; //Castear
-    //console.log( largoDelPoder );
-  
-  
-  })()
-  
-  
+mystique = charles;
+mystique = apocalipsis;
