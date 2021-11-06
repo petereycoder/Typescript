@@ -9,3 +9,4 @@
     var a = callShrek();
     console.log(a);
 })();
+//# sourceMappingURL=void.js.map

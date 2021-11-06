@@ -11,3 +11,4 @@
         powers: ['Super fuerte']
     };
 })();
+//# sourceMappingURL=objects.js.map

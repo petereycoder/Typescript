@@ -14,3 +14,4 @@
     console.log(typeof mycostumVariable);
     console.log(mycostumVariable);
 })();
+//# sourceMappingURL=union-types.js.map

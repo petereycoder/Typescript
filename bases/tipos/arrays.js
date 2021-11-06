@@ -5,3 +5,4 @@
     var villans = ['Duende Verde', 'Decepticoms', 'Malefica'];
     villans.forEach(function (v) { return console.log(v.toLocaleUpperCase()); });
 })();
+//# sourceMappingURL=arrays.js.map

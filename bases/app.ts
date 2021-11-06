@@ -63,11 +63,16 @@ type Apocalipsis = {
   miembros: string [];
 }
 
+console.log('Paso por aquí');
+
 const apocalipsis: Apocalipsis = {
   lider:true,
   miembros: ["Magneto","Tormenta","Psylocke","Angel"]
 }
 
+console.log('Paso por aca');
+
+console.log(apocalipsis);
 
 // Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
 let mystique: Charles | Apocalipsis;

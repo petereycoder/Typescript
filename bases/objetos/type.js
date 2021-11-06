@@ -11,3 +11,4 @@
         powers: [1]
     };
 })();
+//# sourceMappingURL=type.js.map
