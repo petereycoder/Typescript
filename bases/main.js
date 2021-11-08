@@ -22,7 +22,9 @@ var __rest = (this && this.__rest) || function (s, e) {
         var { ironman } = _a, resto = __rest(_a, ["ironman"]);
         console.log(ironman, resto);
     };
-    printAvenger(avengers);
+    const avengersArr = ['Capitan América', true, 30.8];
+    const [capitan, boleano, numero] = avengersArr;
+    console.log({ capitan, boleano, numero });
 })();
 (() => {
     const nombre = 'Felipe';
