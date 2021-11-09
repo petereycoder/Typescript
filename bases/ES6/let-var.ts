@@ -6,6 +6,6 @@
         console.log(nombre);
     }
 
-    getName();
+    //getName();
 
 })()

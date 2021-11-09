@@ -19,13 +19,13 @@
     //console.log(poder.toFixed(2), vision.toUpperCase());
 
     const printAvenger = ({ironman,...resto}:Avenger) => {
-        console.log(ironman,resto);
+        //console.log(ironman,resto);
     }
 
     //printAvenger(avengers);
 
     const avengersArr: [string,boolean,number] = ['Capitan América', true, 30.8];
     const [capitan, boleano, numero] = avengersArr;
-    console.log({capitan,boleano,numero});
+    //console.log({capitan,boleano,numero});
 
 })()
