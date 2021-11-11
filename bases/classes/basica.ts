@@ -24,7 +24,7 @@
     const atman = new Avenger('Antman','Capitan','Scott Lang');
     //console.log(atman);
 
-    console.log(Avenger.getavgAge());
+    //console.log(Avenger.getavgAge());
     
 
 })()
