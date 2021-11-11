@@ -9,6 +9,7 @@ class Avenger{
     protected getfullName(){
         return `${this.name} ${this.realName}`;
     }
+    
 }
 
 class Xmen extends Avenger{
@@ -22,12 +23,26 @@ class Xmen extends Avenger{
         console.log('Constructor Xmen Llamando ');
     }
 
+    get fullName(){
+        return `${this.name} - ${this.realName}`;
+    }
+
+    set fullName(name:string){
+        if(name.length < 3){
+            throw new Error('El nombre tiene que ser mayor a 3 letras');
+        }
+        this.name = name;
+    }
+
     getfullNamedesdeXmen(){
         console.log(super.getfullName());
     }
+
+    
 }
 
 const wolwerine =  new Xmen('Wolwerine','Logan',true);
-console.log(wolwerine);
+wolwerine.fullName = 'Felipe';
+console.log(wolwerine.fullName);
 
-wolwerine.getfullNamedesdeXmen();
+//wolwerine.getfullNamedesdeXmen();
