@@ -41,8 +41,8 @@ class Xmen extends Avenger{
     
 }
 
-const wolwerine =  new Xmen('Wolwerine','Logan',true);
-wolwerine.fullName = 'Felipe';
-console.log(wolwerine.fullName);
+//const wolwerine =  new Xmen('Wolwerine','Logan',true);
+//wolwerine.fullName = 'Felipe';
+//console.log(wolwerine.fullName);
 
 //wolwerine.getfullNamedesdeXmen();
