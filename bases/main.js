@@ -19,6 +19,9 @@
             id: 123,
             zip: 71500,
             city: 'Oaxaca'
+        },
+        getfullAddress(id) {
+            return this.address.city;
         }
     };
     const client2 = {
@@ -28,6 +31,9 @@
             id: 124,
             zip: 71580,
             city: 'Miahuatlán'
+        },
+        getfullAddress(id) {
+            return this.address.city;
         }
     };
 })();
