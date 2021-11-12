@@ -24,7 +24,7 @@
 
     apocalipsis1.changeName('Peterey');
 
-    console.log( apocalipsis1, apocalipsis2, apocalipsis3);
+    //console.log( apocalipsis1, apocalipsis2, apocalipsis3);
 
 
 })()
