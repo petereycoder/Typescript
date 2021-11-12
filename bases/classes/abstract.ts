@@ -27,6 +27,6 @@
         console.log(character.realName);
     }
 
-    printName(magneto);
+    //printName(magneto);
 
 })()
