@@ -13,6 +13,14 @@
 })();
 (() => {
     class Mutant {
+        constructor(a, n, rln) {
+            this.a = a;
+            this.n = n;
+            this.rln = rln;
+            this.age = a;
+            this.name = n;
+            this.realName = rln;
+        }
         mutantPower(id) {
             return this.name + ' ' + this.realName;
         }

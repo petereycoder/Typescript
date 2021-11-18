@@ -19,6 +19,16 @@
             return this.name + ' ' + this.realName;
         }
 
+        constructor(
+            public a:number,
+            public n:string,
+            public rln:string
+            ){
+                this.age  = a;
+                this.name = n;
+                this.realName = rln;
+        }
+
     }
 
 })()

@@ -1,81 +1,82 @@
-type Carro = {
-  carroceria: string;
-  modelo: string;
-  antibalas: boolean;
-  pasajeros: number;
-  disparar?: () => void;
+// Crear interfaces
+
+// Cree una interfaz para validar el auto (el valor enviado por parametro)
+interface Auto{
+  encender: boolean;
+  velocidadMaxima: number;
+  acelerar(): void;
 }
 
-// Objetos
-const batimovil: Carro = {
-  carroceria: "Negra",
-  modelo: "6x6",
-  antibalas: true,
-  pasajeros:4
-};
+const conducirBatimovil = ( auto:Auto ):void => {
+  auto.encender = true;
+  auto.velocidadMaxima = 100;
+  auto.acelerar();
+}
 
-const bumblebee: Carro = {
-  carroceria: "Amarillo con negro",
-  modelo: "4x2",
-  antibalas: true,
-  pasajeros:4,
-  disparar(){ // El metodo disparar es opcional
-    console.log("Disparando");
+const batimovil: Auto = {
+  encender:false,
+  velocidadMaxima:0,
+  acelerar(){
+    console.log("...... gogogo!!!");
   }
-};
+}
 
-type Villano = {
+// Cree una interfaz con que permita utilzar el siguiente objeto
+// utilizando propiedades opcionales
+
+interface Guason{
+  reir?: boolean;
+  comer?: boolean;
+  llorar?: boolean;
+}
+
+const guason: Guason = {
+  reir: true,
+  comer:true,
+  llorar:false
+}
+
+const reir = ( guason:Guason ):void => {
+  if( guason.reir ){
+    console.log("JAJAJAJA");
+  }
+}
+
+
+// Cree una interfaz para la siguiente funcion
+interface ciudadGoticaFn{
+  (ciudadanos:string[]):number;
+}
+
+const ciudadGotica: ciudadGoticaFn = ( ciudadanos:string[] ):number => {
+  return ciudadanos.length;
+}
+
+// Cree una interfaz que obligue crear una clase
+// con las siguientes propiedades y metodos
+
+/*
+  propiedades:
+    - nombre
+    - edad
+    - sexo
+    - estadoCivil
+    - imprimirBio(): void // en consola una breve descripcion.
+*/
+interface PersonaInterface{
   nombre: string;
   edad: number;
-  mutante: boolean;
+  sexo: string;
+  estadoCivil:string;
+  imprimirBio():void;
 }
 
-// Villanos debe de ser un arreglo de objetos personalizados
-const villanos: Villano []= [{
-  nombre:"Lex Luthor",
-  edad: 54,
-  mutante:false
-},{
-  nombre: "Erik Magnus Lehnsherr",
-  edad: 49,
-  mutante: true
-},{
-  nombre: "James Logan",
-  edad: 32,
-  mutante: true
-}];
-
-// Multiples tipos
-// cree dos tipos, uno para charles y otro para apocalipsis
-
-type Charles = {
-  poder: string;
-  estatura: number;
+class Persona implements PersonaInterface{
+  public nombre: string;
+  public edad: number;
+  public sexo: string;
+  public estadoCivil: string;
+  imprimirBio(){
+    console.log('Descripción ...');
+  }
 }
-
-const charles: Charles = {
-  poder:"psiquico",
-  estatura: 1.78
-};
-
-type Apocalipsis = {
-  lider: boolean;
-  miembros: string [];
-}
-
-console.log('Paso por aquí');
-
-const apocalipsis: Apocalipsis = {
-  lider:true,
-  miembros: ["Magneto","Tormenta","Psylocke","Angel"]
-}
-
-console.log('Paso por aca');
-
-console.log(apocalipsis);
-
-// Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
-let mystique: Charles | Apocalipsis;
-
-mystique = charles;
-mystique = apocalipsis;
