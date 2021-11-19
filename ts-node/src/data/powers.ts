@@ -1,17 +1,17 @@
 export interface Power{
     id: number;
-    des: string;
+    desc: string;
 }
 
 
 const powers: Power [] = [
     {
         id: 1,
-        des: 'Money'
+        desc: 'Money'
     },
     {
         id: 2,
-        des: 'Drugs'
+        desc: 'Drugs'
     }
 ];
 
