@@ -1,15 +1,14 @@
-import { Hero } from './classes/Hero';
-//import * as HeroClasses from './classes/Hero';
-//import  powers, {Power}  from './data/powers';
-import powers from './data/powers';
+import { printObject, genericFuntion } from './generics/generics';
 
-//const Hero = 123;
 
-//const ironman = new HeroClasses.Hero('Ironman',1,45);
-const ironman = new Hero('Ironman',10,45);
-console.log(ironman);
-console.log(ironman.power);
+//printObject(123);
+//printObject(new Date());
+//printObject({a:1,b:2,c:3});
+//printObject([1,2,3,4,5,6,7,8,9]);
+//printObject('Hola Mundo');
 
+console.log(genericFuntion(123));
+console.log(genericFuntion(3.1416).toFixed(2));
 
 
 
